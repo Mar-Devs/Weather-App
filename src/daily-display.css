@@ -1,0 +1,88 @@
+.flex-container{
+    grid-row: 2/3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.daily-container{
+    width: 60%;
+    height: 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg,#ffd6e7,white);
+    border-style: solid;
+    border-color: #ff85aa;
+    border-width: 0.5px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.daily-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.daily-display h2{
+    font-size: 2rem;
+}
+
+.daily-display-h2{
+    display: flex;
+    align-items: center;
+}
+
+.date-display, .condition{
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+.daily-info{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.humidity, .wind-speed, .visibility{
+    height: 2rem;
+    width: 5rem;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.humidity img, .wind-speed img, .visibility img{
+    height: 0.8rem;
+    width: 0.8rem;
+    margin-right: 5px;
+}
+
+.daily-temp-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.daily-temp-container h2{
+    font-size: 5rem;
+}
+
+.daily-temp-container p{
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.main-weather-icon{
+    height: 4rem;
+    width: 4rem;
+}

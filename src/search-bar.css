@@ -1,0 +1,84 @@
+:root{
+    --text-color : #b07090;
+    --border-color: #ff85aa;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff0f5;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  padding-top: 1rem;
+  width: 100%;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.search-city {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-city input {
+  width: 60%;
+  padding: 1rem;
+  height: 1rem;
+  border-radius: 10px;
+  border: solid;
+  border-width: 0.5px;
+  border-color: var(--border-color);
+  padding-left: 2.5rem;
+  color: var(--text-color)
+}
+
+.search-city-icon {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: -2.2rem;
+}
+
+.search-city-icon img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+@keyframes spin {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon {
+  height: 50px;
+  width: 50px;
+  animation: spin 0.5s infinite;
+  display: none;
+}
