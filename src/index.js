@@ -16,12 +16,39 @@ import {
 import { hourlyData } from "./hourly-data.js";
 import "./hourly.css";
 import "./weekly-and-conditions.css";
+import favIcon from "./resources/cloud_24dp_9B5278_FILL0_wght400_GRAD0_opsz24.svg";
+import loader from "./resources/progress_activity_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
 
+function addFavIcon() {
+  const linkElem = document.createElement("link");
+  document.head.appendChild(linkElem);
+  linkElem.rel = "icon";
+  linkElem.type = "image/x-icon";
+  linkElem.href = favIcon;
+}
+
+function loaderFunc() {
+  const loadingIcon = document.createElement("img");
+  loadingIcon.src = loader;
+  loadingIcon.className = "loading-icon";
+  document.body.appendChild(loadingIcon);
+
+  // const container = document.querySelector(".container")
+  // container.style.display = "none"
+
+  return loadingIcon
+}
+
+let loading = loaderFunc();
+
+addFavIcon();
 addLoadingIcon();
 waterIconFunc();
 windIconFunc();
 visibilityIconFunc();
 async function execute(element) {
+  loading.style.display = "flex";
+
   try {
     let city = await getCity();
     hourlyData(city);
@@ -96,7 +123,7 @@ async function execute(element) {
     let l = objectToString(cityLow);
     console.log(`The low is: ${l}`);
   } finally {
-    element.value = "";
+    loading.style.display = "none";
   }
 }
 

@@ -1,6 +1,6 @@
-:root{
-    --text-color : #b07090;
-    --border-color: #ff85aa;
+:root {
+  --text-color: #b07090;
+  --border-color: #ff85aa;
 }
 
 * {
@@ -21,8 +21,30 @@ body {
   align-items: center;
   background-color: #fff0f5;
   overflow: hidden;
+  font-family: "Inconsolata";
 }
 
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+}
+
+@keyframes spin {
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.loading-icon{
+    height: 50px;
+    width: 50px;
+    animation: spin 0.5s infinite;
+    display: none;
+}
 .container {
   height: 100vh;
   display: grid;
@@ -50,7 +72,7 @@ body {
   border-width: 0.5px;
   border-color: var(--border-color);
   padding-left: 2.5rem;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 .search-city-icon {
