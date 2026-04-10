@@ -1,25 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<script defer src="main.js"></script></head>
-<body>
-        <div class="info-container">
-      <div class="city">
-        <label for="city">City:</label>
-        <input type="text" name="city" id="city" class="user-input" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="container">
+      <div class="search-city">
+        <div class="search-city-icon"></div>
+        <input
+          type="text"
+          placeholder="Search City..."
+          class="search-city-input"
+        />
       </div>
-      <div class="units">
-        <label for="units">Units</label>
-        <select name="Units" id="units" class="user-unit">
-          --Select--
-          <option value="us">Fahrenheit</option>
-          <option value="uk">Celsius</option>
-        </select>
+      <div class="flex-container">
+        <div class="daily-container">
+          <div class="daily-display">
+            <div class="daily-display-h2">
+              <h2 class="city-name">Paris, France</h2>
+            </div>
+            <p class="date-display">Thursday, 9th of April, 2026</p>
+            <p class="condition">Partly Cloudy</p>
+            <div class="daily-info">
+              <div class="humidity">
+                <h6 class="humidityElm">60%</h6>
+              </div>
+              <div class="wind-speed">
+                <h6 class="wind-speed-elem">14km/h</h6>
+              </div>
+              <div class="visibility">
+                <h6 class="visibility-today">9km</h6>
+              </div>
+            </div>
+          </div>
+          <div class="daily-temp-container">
+            <h2 class="city-temp">21&deg</h2>
+            <p class="feels-like">Feels like 19&deg</p>
+          </div>
+        </div>
       </div>
-      <button>Submit</button>
+
+      <!----HOURLY DISPLAY-->
+      <div class="outer-container">
+        <div class="hourly-display">
+          <div class="hourly-p">
+            <p>HOURLY</p>
+          </div>
+          <div class="hour-divs">
+            <div class="now">
+              <p>Now</p>
+              <div class="img-div"></div>
+              <!-- <img src="" alt=""> -->
+              <h6 class="now-temp">21&deg</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---Week + Conditions-->
+      <div class="outer">
+      <div class="week-conditions">
+        <div class="week">
+          <div class="this-week">
+            <p>THIS WEEK</p>
+          </div>
+          <div class="week-day">
+            <div class="weekly-day-of-week">
+              <p class="week-in-p">Saturday</p>
+            </div>
+            <div class="icon-and-condition">
+              <div class="icon-append"></div>
+              <div class="condition">
+                <p class="p-condition">Cloudy</p>
+              </div>
+            </div>
+            <div class="high-and-low">
+              <p class="week-high">12&deg/</p>
+              <p class="week-low">20&deg</p>
+            </div>
+          </div>
+        </div>
+        <div class="conditions-div-uv">
+          <p>UV Index</p>
+          <h4 class="dynamic-uv">4</h4>
+        </div>
+      </div>
+      </div>
     </div>
-</body>
+    <!---Load-->
+    <!-- <img class="loading-icon" alt="loading"> -->
+
+    <!--Data Display-->
+  </body>
 </html>

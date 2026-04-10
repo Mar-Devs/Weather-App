@@ -3,7 +3,6 @@ import searchIcon from "./resources/search_24dp_B07090_FILL0_wght400_GRAD0_opsz2
 import waterIcon from "./resources/water_drop_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.svg";
 import windIcon from "./resources/air_24dp_FF85AA_FILL0_wght400_GRAD0_opsz24.svg";
 import visibilityIcon from "./resources/visibility_24dp_FF85AA_FILL0_wght400_GRAD0_opsz24.svg";
-// import * as iconSet from "./svg";
 
 export function objectToString(obj) {
   let obj2 = JSON.stringify(obj);

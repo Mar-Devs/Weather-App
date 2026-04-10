@@ -29,8 +29,9 @@ body {
   grid-template-rows: repeat(5, 1fr);
   padding-top: 1rem;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   gap: 2rem;
+  justify-content: center;
 }
 
 .search-city {

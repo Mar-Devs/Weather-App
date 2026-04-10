@@ -1,7 +1,7 @@
 import { getCity } from "./user-input.js";
 import { getCurrentWeather } from "./to-days-weather.js";
 import "./search-bar.css";
-// import { tenDayForevast } from "./ten-day-forecast.js";
+import { tenDayForevast } from "./ten-day-forecast.js";
 import "./media-queries.css";
 import "./daily-display.css";
 import {
@@ -11,10 +11,11 @@ import {
   objectToString,
   visibilityIconFunc,
   dailyH2Icon,
-  deleteDOM
+  deleteDOM,
 } from "./small-functions.js";
 import { hourlyData } from "./hourly-data.js";
 import "./hourly.css";
+import "./weekly-and-conditions.css";
 
 addLoadingIcon();
 waterIconFunc();
@@ -24,6 +25,7 @@ async function execute(element) {
   try {
     let city = await getCity();
     hourlyData(city);
+    tenDayForevast();
     // let tenday = await tenDayForevast(city)
     let [
       cityTemp,
@@ -83,6 +85,8 @@ async function execute(element) {
 
     let uv = objectToString(cityUV);
     console.log(`The UV index is: ${uv}`);
+    const getUvElem = document.querySelector(".dynamic-uv");
+    getUvElem.textContent = uv;
 
     console.log(`The description is: ${apiDescription}`);
 
@@ -99,5 +103,5 @@ async function execute(element) {
 const userCity = document.querySelector(".search-city-input");
 userCity.addEventListener("keydown", (e) => {
   if (e.key === "Enter") execute(userCity);
-  deleteDOM()
+  deleteDOM();
 });
