@@ -1,11 +1,42 @@
-@media (max-width: 669px) {
+@media (max-width: 669px) and (min-width: 470px) {
   html {
-    font-size: 12px;
+    font-size: clamp(16px, 2vw, 18px);
   }
 
-  .daily-container{
+  .daily-container {
     flex-direction: column;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: pink white;
+    width: 80%;
   }
 
+  .search-city-input {
+    font-size: 16px;
+  }
 }
 
+@media (max-width: 469px) {
+  html {
+    font-size: clamp(1.2rem, 2.5vw, 4rem);
+  }
+
+  .daily-container {
+    flex-direction: column;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: pink white;
+  }
+
+  .search-city-input {
+    font-size: 16px;
+  }
+  .week{
+    width: auto;
+  }
+
+  .week-conditions{
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
