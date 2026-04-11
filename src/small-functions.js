@@ -70,9 +70,9 @@ export async function dailyH2Icon(importedIcon) {
   div.appendChild(weatherIcon);
 }
 
-export function deleteDOM() {
+export function deleteDOM(getElementClassName) {
   try {
-    const weatherIcon = document.querySelector(".main-weather-icon");
+    const weatherIcon = document.querySelector(getElementClassName);
     weatherIcon.remove();
   } catch {
     console.log("Oops, it doesn't exist yet.");

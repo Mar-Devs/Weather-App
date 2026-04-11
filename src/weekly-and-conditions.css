@@ -45,6 +45,7 @@
     border-width: 0.5px;
     padding-bottom: 1rem;
     border-color: var(--border-color);
+    overflow: auto;
 }
 
 .high-and-low{

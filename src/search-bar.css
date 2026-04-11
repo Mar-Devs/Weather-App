@@ -61,7 +61,8 @@ body {
   grid-template-rows: repeat(5, 1fr);
   padding-top: 1rem;
   width: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   gap: 2rem;
   justify-content: center;
 }

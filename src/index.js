@@ -34,6 +34,7 @@ visibilityIconFunc();
 async function execute(element) {
   try {
     let city = await getCity();
+    const getContainer = document.querySelector(".flex-container");
     hourlyData(city);
     let tenday = await tenDayForevast(city);
     let [
@@ -111,6 +112,13 @@ async function execute(element) {
 
 const userCity = document.querySelector(".search-city-input");
 userCity.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") execute(userCity);
-  deleteDOM();
+  if (e.key === "Enter") {
+    const userCity = document.querySelector(".search-city-input");
+    userCity.blur();
+    execute(userCity);
+    deleteDOM(".main-weather-icon");
+    deleteDOM(".temps-icon");
+    deleteDOM(".week-day");
+    deleteDOM(".hour-divs-dynamic");
+  }
 });
