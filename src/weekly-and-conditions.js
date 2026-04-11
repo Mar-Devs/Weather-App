@@ -22,6 +22,7 @@ export function createWeekleyDivs(
 
   const p = document.createElement("p");
   p.textContent = weekDay;
+  console.log(`THIS IS FROM WEEKLY FUNC ${weekDay}`)
   p.className = "week-in-p";
   pDiv.appendChild(p);
 
@@ -39,11 +40,11 @@ export function createWeekleyDivs(
   iconAppend.appendChild(img);
 
   const condition = document.createElement("div");
-  condition.className = "condition";
+  condition.className = "conditionED";
   iconAndCondition.appendChild(condition);
 
   const pCondition = document.createElement("p");
-  p.textContent = conditionS;
+  pCondition.textContent = conditionS;
   pCondition.className = "p-condition";
   condition.appendChild(pCondition);
 

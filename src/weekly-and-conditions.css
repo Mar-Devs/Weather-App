@@ -23,7 +23,7 @@
     border-radius: 10px;
     padding: 2rem;
     gap: 1rem;
-    width: 50%;
+    width: auto;
     border: solid 0.5px var(--border-color);
 }
 
@@ -60,8 +60,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    max-height: fit-content;
 }
 
 .conditions-div-uv p{
@@ -70,4 +70,15 @@
 
 .conditions-div-uv h4{
     font-size: 2rem;
+}
+
+.icon-and-condition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-and-condition img{
+    height: 2rem;
+    width: 2rem;
 }

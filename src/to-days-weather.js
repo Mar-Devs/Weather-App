@@ -1,8 +1,25 @@
-import { loadingIcon } from "./small-functions.js";
-import { displayData } from "./small-functions.js";
+import logo from "./resources/progress_activity_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
+
+function loadingIconFunction() {
+  const loadingIconDiv = document.createElement("div");
+  loadingIconDiv.className = "loading-icon-div";
+  const loadingIconImg = document.createElement("img");
+  const mainContainer = document.querySelector(".daily-container");
+  mainContainer.style.overflow = "hidden";
+
+  mainContainer.appendChild(loadingIconDiv);
+  loadingIconDiv.appendChild(loadingIconImg);
+  loadingIconDiv.style.display = "flex";
+  loadingIconImg.style.display = "block";
+  loadingIconImg.className = "loading-icon";
+  loadingIconImg.src = logo;
+
+  return loadingIconDiv;
+}
 
 export async function getCurrentWeather(city) {
-  // let loadIcon = loadingIcon();
+  // let ee = loadingIconFunction();
+
   try {
     console.log(city);
     let response = await fetch(city);
@@ -23,7 +40,7 @@ export async function getCurrentWeather(city) {
 
     let cityConditions = data.currentConditions.conditions;
 
-    let nowIcon = data.currentConditions.icon
+    let nowIcon = data.currentConditions.icon;
 
     let cityUV = data.currentConditions.uvindex;
 
@@ -49,12 +66,15 @@ export async function getCurrentWeather(city) {
       humidityToday,
       windSpeed,
       visibilityToday,
-      nowIcon
+      nowIcon,
     ];
   } catch {
-    new Error("Something went wrong...");
-  } // finally {
-  //   loadIcon.style.display = "none";
-  //   displayData();
+    new Error("Something went wrong at 'to-days-weather.js'...");
+  } 
+  // finally {
+  //   ee.style.display = "none";
+  //   const rr = document.querySelector(".daily-container");
+  //   rr.style.padding = "2rem";
+  //   rr.style.overflow = "auto";
   // }
 }

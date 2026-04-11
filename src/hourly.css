@@ -7,15 +7,14 @@
 }
 
 .hourly-display {
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-auto-flow: row;
   background-color: white;
   border-style: solid;
   border-width: 0.5px;
   border-color: var(--border-color);
-  width: 60%;
+  max-width: 60%;
+  min-width: 60%;
   height: 10rem;
   border-radius: 10px;
   padding: 2rem;
@@ -28,12 +27,11 @@
 }
 
 .hour-divs {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: pink white;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
+   display: grid;
+  grid-template-columns: repeat(24,1fr); 
   gap: 1rem;
 }
 

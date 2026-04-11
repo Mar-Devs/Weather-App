@@ -1,4 +1,3 @@
-import logo from "./resources/progress_activity_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg";
 import searchIcon from "./resources/search_24dp_B07090_FILL0_wght400_GRAD0_opsz24.svg";
 import waterIcon from "./resources/water_drop_24dp_5985E1_FILL0_wght400_GRAD0_opsz24.svg";
 import windIcon from "./resources/air_24dp_FF85AA_FILL0_wght400_GRAD0_opsz24.svg";
@@ -13,13 +12,6 @@ export function logicToUi(htmlElement, reading) {
   let htmlDOM = htmlElement;
   htmlDOM.textContent = reading;
 }
-
-// export function loadingIcon() {
-//   const loadIcon = document.querySelector(".loading-icon");
-//   loadIcon.style.display = "block";
-//   loadIcon.src = logo;
-//   return loadIcon;
-// }
 
 export function displayData() {
   const weatherDataDisplay = document.querySelector(".weather-data-display");
