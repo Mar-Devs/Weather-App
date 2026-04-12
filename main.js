@@ -275,6 +275,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.landing-input {
 .search-city-input-first {
   color: var(--text-color);
   font-size: 16px;
+  border-color: var(--border-color);
+  border: solid;
+  border-width: 0.5px;
 }
 
 .landing-unit {
@@ -289,6 +292,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.landing-input {
   width: auto;
   margin-top: 2px;
   background-color: white;
+  border-color: var(--border-color);
   padding: 0.1rem;
   border-radius: 10px;
 }
@@ -316,7 +320,7 @@ button:active {
 .city input {
   margin-top: 2px;
 }
-`, "",{"version":3,"sources":["webpack://./src/landing-page.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,SAAS;EACT,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,wBAAwB;AAC1B;;AAEA;EACE,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,oBAAoB;AACtB;;AAEA;EACE,wBAAwB;EACxB,WAAW;EACX,eAAe;EACf,uBAAuB;EACvB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,gBAAgB;EAChB,uBAAuB;EACvB,iCAAiC;EACjC,wBAAwB;EACxB,mBAAmB;EACnB,eAAe;AACjB;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;AACb;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".landing-input {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 2rem;\r\n  gap: 1rem;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  border-radius: 10px;\r\n  margin: 1rem;\r\n}\r\n\r\n.landing-container h2 {\r\n  font-style: italic;\r\n  color: var(--text-color);\r\n}\r\n\r\n.input-container-landing {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-input-first {\r\n  color: var(--text-color);\r\n  font-size: 16px;\r\n}\r\n\r\n.landing-unit {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n  align-items: stretch;\r\n}\r\n\r\n.user-unit-first {\r\n  color: var(--text-color);\r\n  width: auto;\r\n  margin-top: 2px;\r\n  background-color: white;\r\n  padding: 0.1rem;\r\n  border-radius: 10px;\r\n}\r\n\r\nbutton {\r\n  width: 10rem;\r\n  margin-top: 1rem;\r\n  background-color: white;\r\n  border-color: var(--border-color);\r\n  color: var(--text-color);\r\n  border-style: solid;\r\n  padding: 0.2rem;\r\n}\r\n\r\nbutton:active {\r\n  transform: translateY(10px);\r\n}\r\n\r\n.city {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n}\r\n\r\n.city input {\r\n  margin-top: 2px;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/landing-page.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,SAAS;EACT,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,wBAAwB;AAC1B;;AAEA;EACE,wBAAwB;EACxB,eAAe;EACf,iCAAiC;EACjC,aAAa;EACb,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,oBAAoB;AACtB;;AAEA;EACE,wBAAwB;EACxB,WAAW;EACX,eAAe;EACf,uBAAuB;EACvB,iCAAiC;EACjC,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,gBAAgB;EAChB,uBAAuB;EACvB,iCAAiC;EACjC,wBAAwB;EACxB,mBAAmB;EACnB,eAAe;AACjB;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;AACb;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".landing-input {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 2rem;\r\n  gap: 1rem;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  border-radius: 10px;\r\n  margin: 1rem;\r\n}\r\n\r\n.landing-container h2 {\r\n  font-style: italic;\r\n  color: var(--text-color);\r\n}\r\n\r\n.input-container-landing {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-input-first {\r\n  color: var(--text-color);\r\n  font-size: 16px;\r\n  border-color: var(--border-color);\r\n  border: solid;\r\n  border-width: 0.5px;\r\n}\r\n\r\n.landing-unit {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n  align-items: stretch;\r\n}\r\n\r\n.user-unit-first {\r\n  color: var(--text-color);\r\n  width: auto;\r\n  margin-top: 2px;\r\n  background-color: white;\r\n  border-color: var(--border-color);\r\n  padding: 0.1rem;\r\n  border-radius: 10px;\r\n}\r\n\r\nbutton {\r\n  width: 10rem;\r\n  margin-top: 1rem;\r\n  background-color: white;\r\n  border-color: var(--border-color);\r\n  color: var(--text-color);\r\n  border-style: solid;\r\n  padding: 0.2rem;\r\n}\r\n\r\nbutton:active {\r\n  transform: translateY(10px);\r\n}\r\n\r\n.city {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n}\r\n\r\n.city input {\r\n  margin-top: 2px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
