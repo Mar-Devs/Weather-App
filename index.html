@@ -6,6 +6,33 @@
     <title>Weatherly</title>
   <script defer src="main.js"></script></head>
   <body>
+    <div class="loader-div"></div>
+    <!--Entry Display-->
+    <div class="landing-container">
+      <h2>Weatherly</h2>
+      <p>Weather at a glance.</p>
+    </div>
+    <div class="landing-input">
+      <p>Enter a city and your preferred temprature unit.</p>
+      <div class="input-container-landing">
+        <div class="city">
+          <label for="city">City</label>
+          <input type="text" class="search-city-input-first" />
+        </div>
+        <div class="landing-unit">
+          <label for="unit">Unit</label>
+          <select name="unit" id="unit" class="user-unit-first">
+            --Select--
+            <option value="metric">C&deg</option>
+            <option value="us">F&deg</option>
+          </select>
+          <div class="button-div">
+            <button class="landing-page-submit-btn">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Main Display-->
     <div class="container">
       <div class="search-city">
         <div class="search-city-icon"></div>
