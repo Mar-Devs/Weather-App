@@ -346,6 +346,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (max-width: 1000px) and (min-wi
 }
 
 @media (max-width: 469px) {
+  html {
+    font-size: clamp(12px, 16px, 20px);
+  }
   .daily-container {
     flex-direction: column;
   }
@@ -359,7 +362,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (max-width: 1000px) and (min-wi
     gap: 1rem;
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/media-queries.css"],"names":[],"mappings":"AAAA;EACE;IACE,sBAAsB;;IAEtB,UAAU;EACZ;;EAEA;IACE,eAAe;EACjB;EACA;IACE,sBAAsB;IACtB,SAAS;EACX;AACF;;AAEA;EACE;IACE,sBAAsB;EACxB;;EAEA;IACE,eAAe;EACjB;;EAEA;IACE,sBAAsB;IACtB,SAAS;EACX;AACF","sourcesContent":["@media (max-width: 1000px) and (min-width: 470px) {\r\n  .daily-container {\r\n    flex-direction: column;\r\n\r\n    width: 80%;\r\n  }\r\n\r\n  .search-city-input {\r\n    font-size: 16px;\r\n  }\r\n  .week-conditions {\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n  }\r\n}\r\n\r\n@media (max-width: 469px) {\r\n  .daily-container {\r\n    flex-direction: column;\r\n  }\r\n\r\n  .search-city-input {\r\n    font-size: 16px;\r\n  }\r\n\r\n  .week-conditions {\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/media-queries.css"],"names":[],"mappings":"AAAA;EACE;IACE,sBAAsB;;IAEtB,UAAU;EACZ;;EAEA;IACE,eAAe;EACjB;EACA;IACE,sBAAsB;IACtB,SAAS;EACX;AACF;;AAEA;EACE;IACE,kCAAkC;EACpC;EACA;IACE,sBAAsB;EACxB;;EAEA;IACE,eAAe;EACjB;;EAEA;IACE,sBAAsB;IACtB,SAAS;EACX;AACF","sourcesContent":["@media (max-width: 1000px) and (min-width: 470px) {\r\n  .daily-container {\r\n    flex-direction: column;\r\n\r\n    width: 80%;\r\n  }\r\n\r\n  .search-city-input {\r\n    font-size: 16px;\r\n  }\r\n  .week-conditions {\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n  }\r\n}\r\n\r\n@media (max-width: 469px) {\r\n  html {\r\n    font-size: clamp(12px, 16px, 20px);\r\n  }\r\n  .daily-container {\r\n    flex-direction: column;\r\n  }\r\n\r\n  .search-city-input {\r\n    font-size: 16px;\r\n  }\r\n\r\n  .week-conditions {\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -415,6 +418,7 @@ body {
   background-color: #fff0f5;
   overflow: hidden;
   font-family: "Inconsolata";
+  padding-top: 1rem ;
 }
 
 @font-face {
@@ -454,7 +458,8 @@ body {
   display: none;
   padding-top: 1rem;
   width: 100%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   gap: 2rem;
   justify-content: center;
 }
@@ -501,7 +506,7 @@ body {
     transform: rotate(360deg);
   }
 }
-`, "",{"version":3,"sources":["webpack://./src/search-bar.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,UAAU;EACV,SAAS;AACX;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,yBAAyB;EACzB,gBAAgB;EAChB,0BAA0B;AAC5B;;AAEA;EACE,0BAA0B;EAC1B,4CAAoE;AACtE;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,gBAAgB;EAChB,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;EAClB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,aAAa;EACb,kCAAkC;EAClC,aAAa;EACb,iBAAiB;EACjB,WAAW;EACX,cAAc;EACd,SAAS;EACT,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,iCAAiC;EACjC,oBAAoB;EACpB,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;EACd,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;EACd,aAAa;AACf;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF","sourcesContent":[":root {\r\n  --text-color: #b07090;\r\n  --border-color: #ff85aa;\r\n}\r\n\r\n* {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\nhtml {\r\n  font-size: clamp(16px, 20px, 26px);\r\n}\r\n\r\nbody {\r\n  height: 100vh;\r\n  box-sizing: border-box;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #fff0f5;\r\n  overflow: hidden;\r\n  font-family: \"Inconsolata\";\r\n}\r\n\r\n@font-face {\r\n  font-family: \"Inconsolata\";\r\n  src: url(\"./resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf\");\r\n}\r\n\r\n@keyframes spin {\r\n  form {\r\n    transform: rotate(0deg);\r\n  }\r\n  to {\r\n    transform: rotate(360deg);\r\n  }\r\n}\r\n\r\n.loading-icon {\r\n  height: 50px;\r\n  width: 50px;\r\n  animation: spin 0.5s infinite;\r\n}\r\n\r\n.loader-div {\r\n  height: 100vh;\r\n  width: 100vw;\r\n  overflow: hidden;\r\n  background-color: #fff0f5;\r\n  z-index: 999;\r\n  position: absolute;\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: none;\r\n}\r\n.container {\r\n  height: 100vh;\r\n  grid-template-rows: repeat(5, 1fr);\r\n  display: none;\r\n  padding-top: 1rem;\r\n  width: 100%;\r\n  overflow: auto;\r\n  gap: 2rem;\r\n  justify-content: center;\r\n}\r\n\r\n.search-city {\r\n  grid-row: 1/2;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.search-city input {\r\n  width: 60%;\r\n  padding: 1rem;\r\n  height: 1rem;\r\n  border-radius: 10px;\r\n  border: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  padding-left: 2.5rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-icon {\r\n  z-index:  2;;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 1.2rem;\r\n  width: 1.2rem;\r\n  margin-right: -2.2rem;\r\n}\r\n\r\n.search-city-icon img {\r\n  height: 1.2rem;\r\n  width: 1.2rem;\r\n}\r\n\r\n@keyframes spin {\r\n  form {\r\n    transform: rotate(0deg);\r\n  }\r\n  to {\r\n    transform: rotate(360deg);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/search-bar.css"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,uBAAuB;AACzB;;AAEA;EACE,UAAU;EACV,SAAS;AACX;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,yBAAyB;EACzB,gBAAgB;EAChB,0BAA0B;EAC1B,kBAAkB;AACpB;;AAEA;EACE,0BAA0B;EAC1B,4CAAoE;AACtE;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,6BAA6B;AAC/B;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,gBAAgB;EAChB,yBAAyB;EACzB,YAAY;EACZ,kBAAkB;EAClB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,aAAa;EACb,kCAAkC;EAClC,aAAa;EACb,iBAAiB;EACjB,WAAW;EACX,gBAAgB;EAChB,kBAAkB;EAClB,SAAS;EACT,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,UAAU;EACV,aAAa;EACb,YAAY;EACZ,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,iCAAiC;EACjC,oBAAoB;EACpB,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;EACd,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,cAAc;EACd,aAAa;AACf;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,yBAAyB;EAC3B;AACF","sourcesContent":[":root {\r\n  --text-color: #b07090;\r\n  --border-color: #ff85aa;\r\n}\r\n\r\n* {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\nhtml {\r\n  font-size: clamp(16px, 20px, 26px);\r\n}\r\n\r\nbody {\r\n  height: 100vh;\r\n  box-sizing: border-box;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #fff0f5;\r\n  overflow: hidden;\r\n  font-family: \"Inconsolata\";\r\n  padding-top: 1rem ;\r\n}\r\n\r\n@font-face {\r\n  font-family: \"Inconsolata\";\r\n  src: url(\"./resources/fonts/Inconsolata-VariableFont_wdth,wght.ttf\");\r\n}\r\n\r\n@keyframes spin {\r\n  form {\r\n    transform: rotate(0deg);\r\n  }\r\n  to {\r\n    transform: rotate(360deg);\r\n  }\r\n}\r\n\r\n.loading-icon {\r\n  height: 50px;\r\n  width: 50px;\r\n  animation: spin 0.5s infinite;\r\n}\r\n\r\n.loader-div {\r\n  height: 100vh;\r\n  width: 100vw;\r\n  overflow: hidden;\r\n  background-color: #fff0f5;\r\n  z-index: 999;\r\n  position: absolute;\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: none;\r\n}\r\n.container {\r\n  height: 100vh;\r\n  grid-template-rows: repeat(5, 1fr);\r\n  display: none;\r\n  padding-top: 1rem;\r\n  width: 100%;\r\n  overflow-y: auto;\r\n  overflow-x: hidden;\r\n  gap: 2rem;\r\n  justify-content: center;\r\n}\r\n\r\n.search-city {\r\n  grid-row: 1/2;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.search-city input {\r\n  width: 60%;\r\n  padding: 1rem;\r\n  height: 1rem;\r\n  border-radius: 10px;\r\n  border: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  padding-left: 2.5rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-icon {\r\n  z-index:  2;;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 1.2rem;\r\n  width: 1.2rem;\r\n  margin-right: -2.2rem;\r\n}\r\n\r\n.search-city-icon img {\r\n  height: 1.2rem;\r\n  width: 1.2rem;\r\n}\r\n\r\n@keyframes spin {\r\n  form {\r\n    transform: rotate(0deg);\r\n  }\r\n  to {\r\n    transform: rotate(360deg);\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -557,6 +562,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
     width: auto;
     border: solid 0.5px var(--border-color);
     overflow: auto;
+    overflow: hidden;
 }
 
 .this-week{
@@ -571,11 +577,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: auto;
     gap: 1rem;
+    margin: 5px;
     border-bottom: solid;
     border-width: 0.5px;
-    padding-bottom: 1rem;
+    padding: 1rem;
     border-color: var(--border-color);
 }
 
@@ -613,7 +620,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
 .icon-and-condition img{
     height: 2rem;
     width: 2rem;
-}`, "",{"version":3,"sources":["webpack://./src/weekly-and-conditions.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,oBAAoB;IACpB,UAAU;AACd;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,aAAa;IACb,SAAS;IACT,WAAW;IACX,uCAAuC;IACvC,cAAc;AAClB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,WAAW;IACX,SAAS;IACT,oBAAoB;IACpB,mBAAmB;IACnB,oBAAoB;IACpB,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,uCAAuC;IACvC,aAAa;IACb,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".outer{\r\n    grid-row: 4/5;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.week-conditions{\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: stretch;\r\n    width: 80%;\r\n}\r\n\r\n.week{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n    border-color: var(--border-color);\r\n    border-radius: 10px;\r\n    padding: 2rem;\r\n    gap: 1rem;\r\n    width: auto;\r\n    border: solid 0.5px var(--border-color);\r\n    overflow: auto;\r\n}\r\n\r\n.this-week{\r\n    width: 100%;\r\n}\r\n\r\n.this-week p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.week-day{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: 100%;\r\n    gap: 1rem;\r\n    border-bottom: solid;\r\n    border-width: 0.5px;\r\n    padding-bottom: 1rem;\r\n    border-color: var(--border-color);\r\n}\r\n\r\n.high-and-low{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n}\r\n\r\n.conditions-div-uv{\r\n    background-color: white;\r\n    border: solid 0.5px var(--border-color);\r\n    padding: 2rem;\r\n    border-radius: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: fit-content;\r\n}\r\n\r\n.conditions-div-uv p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.conditions-div-uv h4{\r\n    font-size: 2rem;\r\n}\r\n\r\n.icon-and-condition{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.icon-and-condition img{\r\n    height: 2rem;\r\n    width: 2rem;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/weekly-and-conditions.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,oBAAoB;IACpB,UAAU;AACd;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,aAAa;IACb,SAAS;IACT,WAAW;IACX,uCAAuC;IACvC,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,WAAW;IACX,SAAS;IACT,WAAW;IACX,oBAAoB;IACpB,mBAAmB;IACnB,aAAa;IACb,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,uCAAuC;IACvC,aAAa;IACb,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".outer{\r\n    grid-row: 4/5;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.week-conditions{\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: stretch;\r\n    width: 80%;\r\n}\r\n\r\n.week{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n    border-color: var(--border-color);\r\n    border-radius: 10px;\r\n    padding: 2rem;\r\n    gap: 1rem;\r\n    width: auto;\r\n    border: solid 0.5px var(--border-color);\r\n    overflow: auto;\r\n    overflow: hidden;\r\n}\r\n\r\n.this-week{\r\n    width: 100%;\r\n}\r\n\r\n.this-week p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.week-day{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: auto;\r\n    gap: 1rem;\r\n    margin: 5px;\r\n    border-bottom: solid;\r\n    border-width: 0.5px;\r\n    padding: 1rem;\r\n    border-color: var(--border-color);\r\n}\r\n\r\n.high-and-low{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n}\r\n\r\n.conditions-div-uv{\r\n    background-color: white;\r\n    border: solid 0.5px var(--border-color);\r\n    padding: 2rem;\r\n    border-radius: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: fit-content;\r\n}\r\n\r\n.conditions-div-uv p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.conditions-div-uv h4{\r\n    font-size: 2rem;\r\n}\r\n\r\n.icon-and-condition{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.icon-and-condition img{\r\n    height: 2rem;\r\n    width: 2rem;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3314,9 +3321,13 @@ function getCityInitial() {
     console.log(userUnit.value);
     const unit = city.replace("metric", userUnit.value);
 
-    console.log(`From the function: ${unit}`);
+    if (userCity.value === "") {
+      alert("Please enter a city.");
+    } else {
+      return unit;
+    }
 
-    return unit;
+    console.log(`From the function: ${unit}`);
   } catch {
     console.log("Oops, something went wrong at getCityInitial()...");
   }
