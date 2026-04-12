@@ -172,20 +172,31 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer-container {
   overflow: scroll;
 }
 
-.hour-divs {
+/* .hour-divs {
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: pink white;
    display: grid;
   grid-template-columns: repeat(24,1fr); 
   gap: 1rem;
+} */
+
+.hour-divs {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: pink white;
+  display: grid;
+  grid-auto-flow: column;
+  min-width: inherit;
+  gap: 1rem;
 }
 
-.now{
+.now {
   background-color: #ff85aa;
 }
 
-.now, .hour-divs-dynamic {
+.now,
+.hour-divs-dynamic {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,15 +208,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer-container {
   min-height: 0;
 }
 
-.hour-divs-dynamic{
+.hour-divs-dynamic {
   background-color: pink;
 }
 
-.temps-icon{
+.temps-icon {
   height: 2rem;
   width: 2rem;
 }
-`, "",{"version":3,"sources":["webpack://./src/hourly.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,cAAc;EACd,cAAc;EACd,aAAa;EACb,mBAAmB;EACnB,aAAa;EACb,SAAS;AACX;;AAEA;EACE,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;EACE,cAAc;EACd,qBAAqB;EACrB,2BAA2B;GAC1B,aAAa;EACd,qCAAqC;EACrC,SAAS;AACX;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,WAAW;AACb","sourcesContent":[".outer-container {\r\n  grid-row: 3/4;\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.hourly-display {\r\n  display: grid;\r\n  grid-auto-flow: row;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  max-width: 60%;\r\n  min-width: 60%;\r\n  height: 10rem;\r\n  border-radius: 10px;\r\n  padding: 2rem;\r\n  gap: 2rem;\r\n}\r\n\r\n.hourly-p p {\r\n  color: var(--text-color);\r\n  overflow: scroll;\r\n}\r\n\r\n.hour-divs {\r\n  overflow: auto;\r\n  scrollbar-width: thin;\r\n  scrollbar-color: pink white;\r\n   display: grid;\r\n  grid-template-columns: repeat(24,1fr); \r\n  gap: 1rem;\r\n}\r\n\r\n.now{\r\n  background-color: #ff85aa;\r\n}\r\n\r\n.now, .hour-divs-dynamic {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 5rem;\r\n  border-radius: 10px;\r\n  min-width: 0;\r\n  min-height: 0;\r\n}\r\n\r\n.hour-divs-dynamic{\r\n  background-color: pink;\r\n}\r\n\r\n.temps-icon{\r\n  height: 2rem;\r\n  width: 2rem;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/hourly.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,WAAW;EACX,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,cAAc;EACd,cAAc;EACd,aAAa;EACb,mBAAmB;EACnB,aAAa;EACb,SAAS;AACX;;AAEA;EACE,wBAAwB;EACxB,gBAAgB;AAClB;;AAEA;;;;;;;GAOG;;AAEH;EACE,cAAc;EACd,qBAAqB;EACrB,2BAA2B;EAC3B,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,yBAAyB;AAC3B;;AAEA;;EAEE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,YAAY;EACZ,aAAa;AACf;;AAEA;EACE,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,WAAW;AACb","sourcesContent":[".outer-container {\r\n  grid-row: 3/4;\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.hourly-display {\r\n  display: grid;\r\n  grid-auto-flow: row;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  max-width: 60%;\r\n  min-width: 60%;\r\n  height: 10rem;\r\n  border-radius: 10px;\r\n  padding: 2rem;\r\n  gap: 2rem;\r\n}\r\n\r\n.hourly-p p {\r\n  color: var(--text-color);\r\n  overflow: scroll;\r\n}\r\n\r\n/* .hour-divs {\r\n  overflow: auto;\r\n  scrollbar-width: thin;\r\n  scrollbar-color: pink white;\r\n   display: grid;\r\n  grid-template-columns: repeat(24,1fr); \r\n  gap: 1rem;\r\n} */\r\n\r\n.hour-divs {\r\n  overflow: auto;\r\n  scrollbar-width: thin;\r\n  scrollbar-color: pink white;\r\n  display: grid;\r\n  grid-auto-flow: column;\r\n  min-width: inherit;\r\n  gap: 1rem;\r\n}\r\n\r\n.now {\r\n  background-color: #ff85aa;\r\n}\r\n\r\n.now,\r\n.hour-divs-dynamic {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 5rem;\r\n  width: 5rem;\r\n  border-radius: 10px;\r\n  min-width: 0;\r\n  min-height: 0;\r\n}\r\n\r\n.hour-divs-dynamic {\r\n  background-color: pink;\r\n}\r\n\r\n.temps-icon {\r\n  height: 2rem;\r\n  width: 2rem;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -277,6 +288,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.landing-input {
   color: var(--text-color);
   width: auto;
   margin-top: 2px;
+  background-color: white;
+  padding: 0.1rem;
+  border-radius: 10px;
 }
 
 button {
@@ -302,7 +316,7 @@ button:active {
 .city input {
   margin-top: 2px;
 }
-`, "",{"version":3,"sources":["webpack://./src/landing-page.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,SAAS;EACT,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,wBAAwB;AAC1B;;AAEA;EACE,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,oBAAoB;AACtB;;AAEA;EACE,wBAAwB;EACxB,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,gBAAgB;EAChB,uBAAuB;EACvB,iCAAiC;EACjC,wBAAwB;EACxB,mBAAmB;EACnB,eAAe;AACjB;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;AACb;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".landing-input {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 2rem;\r\n  gap: 1rem;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  border-radius: 10px;\r\n  margin: 1rem;\r\n}\r\n\r\n.landing-container h2 {\r\n  font-style: italic;\r\n  color: var(--text-color);\r\n}\r\n\r\n.input-container-landing {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-input-first {\r\n  color: var(--text-color);\r\n  font-size: 16px;\r\n}\r\n\r\n.landing-unit {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n  align-items: stretch;\r\n}\r\n\r\n.user-unit-first {\r\n  color: var(--text-color);\r\n  width: auto;\r\n  margin-top: 2px;\r\n}\r\n\r\nbutton {\r\n  width: 10rem;\r\n  margin-top: 1rem;\r\n  background-color: white;\r\n  border-color: var(--border-color);\r\n  color: var(--text-color);\r\n  border-style: solid;\r\n  padding: 0.2rem;\r\n}\r\n\r\nbutton:active {\r\n  transform: translateY(10px);\r\n}\r\n\r\n.city {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n}\r\n\r\n.city input {\r\n  margin-top: 2px;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/landing-page.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,aAAa;EACb,SAAS;EACT,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,iCAAiC;EACjC,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;AAC1B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,wBAAwB;AAC1B;;AAEA;EACE,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,oBAAoB;AACtB;;AAEA;EACE,wBAAwB;EACxB,WAAW;EACX,eAAe;EACf,uBAAuB;EACvB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,YAAY;EACZ,gBAAgB;EAChB,uBAAuB;EACvB,iCAAiC;EACjC,wBAAwB;EACxB,mBAAmB;EACnB,eAAe;AACjB;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;AACb;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".landing-input {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 2rem;\r\n  gap: 1rem;\r\n  background-color: white;\r\n  border-style: solid;\r\n  border-width: 0.5px;\r\n  border-color: var(--border-color);\r\n  border-radius: 10px;\r\n  margin: 1rem;\r\n}\r\n\r\n.landing-container h2 {\r\n  font-style: italic;\r\n  color: var(--text-color);\r\n}\r\n\r\n.input-container-landing {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 1rem;\r\n  color: var(--text-color);\r\n}\r\n\r\n.search-city-input-first {\r\n  color: var(--text-color);\r\n  font-size: 16px;\r\n}\r\n\r\n.landing-unit {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n  align-items: stretch;\r\n}\r\n\r\n.user-unit-first {\r\n  color: var(--text-color);\r\n  width: auto;\r\n  margin-top: 2px;\r\n  background-color: white;\r\n  padding: 0.1rem;\r\n  border-radius: 10px;\r\n}\r\n\r\nbutton {\r\n  width: 10rem;\r\n  margin-top: 1rem;\r\n  background-color: white;\r\n  border-color: var(--border-color);\r\n  color: var(--text-color);\r\n  border-style: solid;\r\n  padding: 0.2rem;\r\n}\r\n\r\nbutton:active {\r\n  transform: translateY(10px);\r\n}\r\n\r\n.city {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: auto;\r\n}\r\n\r\n.city input {\r\n  margin-top: 2px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -547,6 +561,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
     justify-content: space-evenly;
     align-items: stretch;
     width: 80%;
+    gap: 1rem;
 }
 
 .week{
@@ -577,7 +592,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: auto;
+    width: 100%;
     gap: 1rem;
     margin: 5px;
     border-bottom: solid;
@@ -620,7 +635,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.outer{
 .icon-and-condition img{
     height: 2rem;
     width: 2rem;
-}`, "",{"version":3,"sources":["webpack://./src/weekly-and-conditions.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,oBAAoB;IACpB,UAAU;AACd;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,aAAa;IACb,SAAS;IACT,WAAW;IACX,uCAAuC;IACvC,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,WAAW;IACX,SAAS;IACT,WAAW;IACX,oBAAoB;IACpB,mBAAmB;IACnB,aAAa;IACb,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,uCAAuC;IACvC,aAAa;IACb,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".outer{\r\n    grid-row: 4/5;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.week-conditions{\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: stretch;\r\n    width: 80%;\r\n}\r\n\r\n.week{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n    border-color: var(--border-color);\r\n    border-radius: 10px;\r\n    padding: 2rem;\r\n    gap: 1rem;\r\n    width: auto;\r\n    border: solid 0.5px var(--border-color);\r\n    overflow: auto;\r\n    overflow: hidden;\r\n}\r\n\r\n.this-week{\r\n    width: 100%;\r\n}\r\n\r\n.this-week p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.week-day{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: auto;\r\n    gap: 1rem;\r\n    margin: 5px;\r\n    border-bottom: solid;\r\n    border-width: 0.5px;\r\n    padding: 1rem;\r\n    border-color: var(--border-color);\r\n}\r\n\r\n.high-and-low{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n}\r\n\r\n.conditions-div-uv{\r\n    background-color: white;\r\n    border: solid 0.5px var(--border-color);\r\n    padding: 2rem;\r\n    border-radius: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: fit-content;\r\n}\r\n\r\n.conditions-div-uv p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.conditions-div-uv h4{\r\n    font-size: 2rem;\r\n}\r\n\r\n.icon-and-condition{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.icon-and-condition img{\r\n    height: 2rem;\r\n    width: 2rem;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/weekly-and-conditions.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,SAAS;AACb;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,oBAAoB;IACpB,UAAU;IACV,SAAS;AACb;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;IACvB,iCAAiC;IACjC,mBAAmB;IACnB,aAAa;IACb,SAAS;IACT,WAAW;IACX,uCAAuC;IACvC,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,WAAW;IACX,SAAS;IACT,WAAW;IACX,oBAAoB;IACpB,mBAAmB;IACnB,aAAa;IACb,iCAAiC;AACrC;;AAEA;IACI,aAAa;IACb,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,uBAAuB;IACvB,uCAAuC;IACvC,aAAa;IACb,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf","sourcesContent":[".outer{\r\n    grid-row: 4/5;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.week-conditions{\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    align-items: stretch;\r\n    width: 80%;\r\n    gap: 1rem;\r\n}\r\n\r\n.week{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n    border-color: var(--border-color);\r\n    border-radius: 10px;\r\n    padding: 2rem;\r\n    gap: 1rem;\r\n    width: auto;\r\n    border: solid 0.5px var(--border-color);\r\n    overflow: auto;\r\n    overflow: hidden;\r\n}\r\n\r\n.this-week{\r\n    width: 100%;\r\n}\r\n\r\n.this-week p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.week-day{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: 100%;\r\n    gap: 1rem;\r\n    margin: 5px;\r\n    border-bottom: solid;\r\n    border-width: 0.5px;\r\n    padding: 1rem;\r\n    border-color: var(--border-color);\r\n}\r\n\r\n.high-and-low{\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;\r\n}\r\n\r\n.conditions-div-uv{\r\n    background-color: white;\r\n    border: solid 0.5px var(--border-color);\r\n    padding: 2rem;\r\n    border-radius: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    max-height: fit-content;\r\n}\r\n\r\n.conditions-div-uv p{\r\n    color: var(--text-color);\r\n}\r\n\r\n.conditions-div-uv h4{\r\n    font-size: 2rem;\r\n}\r\n\r\n.icon-and-condition{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.icon-and-condition img{\r\n    height: 2rem;\r\n    width: 2rem;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3111,11 +3126,11 @@ async function dailyH2Icon(importedIcon) {
 }
 
 function deleteDOM(className) {
-  try {
-    const weatherIcon = document.querySelector(className);
+  const weatherIcon = document.querySelector(className);
+  if (weatherIcon) {
     weatherIcon.remove();
-  } catch {
-    console.log("Oops, it doesn't exist yet.");
+  } else {
+    console.log("Uhhh");
   }
 }
 
@@ -3133,7 +3148,6 @@ function loadInject() {
 
   return div;
 }
-
 
 
 /***/ },
